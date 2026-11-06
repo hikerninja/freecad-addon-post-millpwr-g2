@@ -1,10 +1,16 @@
 """Native FreeCAD CAM postprocessor, classic export API (also wrapped by current FreeCAD).
 Install this and millpwr_dialect.py together in FreeCAD's user postprocessor path.
 """
-import os
 import sys
+from pathlib import Path
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Resolve symlinks so dependencies are loaded from the
+# installed Addon Manager repository.
+POSTPROCESSOR_DIR = Path(__file__).resolve().parent
+
+if str(POSTPROCESSOR_DIR) not in sys.path:
+    sys.path.insert(0, str(POSTPROCESSOR_DIR))
+
 from millpwr_dialect import Dialect, PostError, canonical
 
 POST_TYPE = "machine"
