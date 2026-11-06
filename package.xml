@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
+  <name>MILLPWR G2 CAM Postprocessor</name>
+  <description>Experimental FreeCAD CAM postprocessor for ACU-RITE MILLPWR G2. NOT validated for live machining.</description>
+  <version>0.2.0</version>
+  <date>2026-11-06</date>
+  <freecadmin>1.1.0</freecadmin>
+  <pythonmin>3.11</pythonmin>
+  <tag>CAM</tag>
+  <tag>CNC</tag>
+  <content><other/></content>
+</package>
